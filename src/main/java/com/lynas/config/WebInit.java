@@ -1,12 +1,10 @@
 package com.lynas.config;
 
-import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
  * Created by lynas on 12/6/2016.
  */
-@Configuration
 public class WebInit extends AbstractAnnotationConfigDispatcherServletInitializer{
 
     @Override

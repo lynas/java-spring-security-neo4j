@@ -5,6 +5,7 @@ import com.lynas.repo.AppUserRepo;
 import com.lynas.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by lynas on 12/6/2016.
@@ -20,6 +21,7 @@ public class AppUserServiceImpl implements AppUserService{
         this.appUserRepo = appUserRepo;
     }
 
+    @Transactional
     @Override
     public AppUser loadUserByUsername(String username) {
         return appUserRepo.findByUsername(username);

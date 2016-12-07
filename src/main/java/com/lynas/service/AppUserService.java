@@ -7,5 +7,5 @@ import com.lynas.model.AppUser;
  */
 public interface AppUserService {
 
-    public AppUser loadUserByUsername(String username);
+    AppUser loadUserByUsername(String username);
 }

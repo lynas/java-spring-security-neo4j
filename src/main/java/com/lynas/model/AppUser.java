@@ -11,7 +11,7 @@ import org.neo4j.ogm.annotation.NodeEntity;
 public class AppUser {
 
     @GraphId
-    private long id;
+    private Long id;
     private String username;
     private String password;
 
@@ -20,18 +20,18 @@ public class AppUser {
     public AppUser() {
     }
 
-    public AppUser(long id, String username, String password, String authorities) {
+    public AppUser(Long id, String username, String password, String authorities) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.authorities = authorities;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -57,5 +57,16 @@ public class AppUser {
 
     public void setAuthorities(String authorities) {
         this.authorities = authorities;
+    }
+
+
+    @Override
+    public String toString() {
+        return "AppUser{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", authorities='" + authorities + '\'' +
+                '}';
     }
 }

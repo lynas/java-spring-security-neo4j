@@ -28,6 +28,12 @@ public class UserDetailsServiceImpl implements UserDetailsService{
 
         AppUser appUser = appUserService.loadUserByUsername(s);
 
+        /*AppUser appUser = new AppUser();
+        appUser.setUsername("admin");
+        appUser.setPassword("$2a$10$3mUSOw6gya8AeNnzL7qiaO2p9qeko.rWVpRpRdZQ4SoICglyGQVHa");
+        appUser.setAuthorities("ROLE_USER, ROLE_ADMIN");*/
+
+
         if (null == appUser) {
             throw new UsernameNotFoundException("No user found with username '%s'" + s);
         }else {
